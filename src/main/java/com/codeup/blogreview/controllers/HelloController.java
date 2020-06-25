@@ -1,6 +1,7 @@
 package com.codeup.blogreview.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -28,6 +29,26 @@ public class HelloController {
         @ResponseBody
         public String insert(){
             return "Posted";
+    }
+
+
+//    views
+
+    @GetMapping("/hello/{name}")
+
+    public String sayHello(@PathVariable String name, Model model) {
+        return "hello";
+    }
+
+    @GetMapping("/join")
+    public String showJoinForm() {
+        return "join";
+    }
+
+    @PostMapping("/join")
+    public String joinCohort(@RequestParam String cohort, Model model) {
+        model.addAttribute("cohort", "Welcome to " + cohort + "!");
+        return "join";
     }
 
 }
