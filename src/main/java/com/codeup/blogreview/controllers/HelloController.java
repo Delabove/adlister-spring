@@ -11,12 +11,12 @@ public class HelloController {
     public String hello() {
         return "Hello from Spring!";
     }
-
-    @GetMapping("/")
-    @ResponseBody
-    public String index() {
-        return "Welcome to my blog!";
-    }
+//
+//    @GetMapping("/")
+//    @ResponseBody
+//    public String index() {
+//        return "Welcome to my blog!";
+//    }
 
     @RequestMapping(path = "/increment/{number}", method = RequestMethod.GET)
     @ResponseBody
