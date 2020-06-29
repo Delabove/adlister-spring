@@ -16,11 +16,12 @@ public String usersGuess(@PathVariable int guess, Model model){
 
 
 //    random number
-int random = ThreadLocalRandom.current().nextInt(1, 6 + 1);
+int random = (int) (Math.random() * 6 + 1);
 
-    model.addAttribute("isCorrectGuess", random == guess);
     model.addAttribute("guess", guess);
-    model.addAttribute("random", guess);
+    model.addAttribute("random", random);
+    model.addAttribute("isCorrectGuess", random == guess);
+
     return "roll-dice";
 
 }
