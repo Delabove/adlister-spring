@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <title>Dice Roll</title>
 </head>
-<body>
+    <body>
+        <nav th:replace="fragments/navbar :: navbar"></nav>
 
+        <div class="container">
+            <a href="#">1</a><br>
+            <a href="#">2</a><br>
+            <a href="#">3</a><br>
+            <a href="#">4</a><br>
+            <a href="#">5</a><br>
+            <a href="#">6</a><br>
 
-<nav th:replace="fragments/navbar :: navbar"></nav>
-
-<a href="#">1</a><br>
-<a href="#">2</a><br>
-<a href="#">3</a><br>
-<a href="#">4</a><br>
-<a href="#">5</a><br>
-<a href="#">6</a><br>
-
-<div th:if="${guess}">
-    <h1>Your guess: <span th:text="${guess}"></span>!</h1>
-    <h1>The rolled number: <span th:text="${random}"></span></h1>
-</div>
-<h3 th:if="${isCorrectGuess}">
-    You guessed correctly!
-</h3>
-<h3 th:if="${isCorrectGuess != null && !isCorrectGuess}">
-    You didn't guess correctly!
-</h3>
-
-</body>
+            <div th:if="${guess}">
+                <h1>Your guess: <span th:text="${guess}"></span>!</h1>
+                <h1>The rolled number: <span th:text="${random}"></span></h1>
+            </div>
+            <h3 th:if="${isCorrectGuess}">
+                You guessed correctly!
+            </h3>
+            <h3 th:if="${isCorrectGuess != null && !isCorrectGuess}">
+                You didn't guess correctly!
+            </h3>
+        </div>
+    </body>
 </html>
