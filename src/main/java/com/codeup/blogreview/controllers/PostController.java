@@ -2,7 +2,9 @@ package com.codeup.blogreview.controllers;
 
 
 import com.codeup.blogreview.DAO.PostRepository;
+import com.codeup.blogreview.DAO.UserRepository;
 import com.codeup.blogreview.models.Post;
+import com.codeup.blogreview.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,9 +16,13 @@ import java.util.List;
 @Controller
 public class PostController {
     private PostRepository postsDao;
+    private UserRepository usersDao;
 
-    public PostController(PostRepository postsRepository){
+    public PostController(PostRepository postsRepository, UserRepository usersRepository){
+
         postsDao = postsRepository;
+        usersDao = usersRepository;
+
     }
 
     @GetMapping("/posts")
@@ -39,22 +45,23 @@ public class PostController {
 
 
     @GetMapping("/posts/create")
-    @ResponseBody
-    public String viewForm(){
-        return "posts/create";
+
+    public String viewForm(Model viewModel){
+        return "View form";
     }
 
-    @PostMapping("posts/create")
-    @ResponseBody
+    @PostMapping("/posts/create")
+
     public String createPost(){
 
-        Post newPost = new Post("Health", "Wear your mask!");
+        User newUser = usersDao.getOne(1L);
+        Post newPost = new Post("Health", "Wear your mask!", newUser);
         postsDao.save(newPost);
         return "Create a New Post!";
     }
 
-    @PostMapping("posts/{id}/edit")
-    @ResponseBody
+    @PostMapping("/posts/{id}/edit")
+
     public String update(@PathVariable long id){
         //find a post
         Post foundPost = postsDao.getOne(id); //select * from ads where id =?
@@ -67,7 +74,7 @@ public class PostController {
 
 
     @PostMapping("/posts/{id}/delete")
-    @ResponseBody
+
     public String destroy(@PathVariable long id){
         postsDao.deleteById(id);
         return "post deleted";
