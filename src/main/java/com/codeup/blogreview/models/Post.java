@@ -1,6 +1,7 @@
 package com.codeup.blogreview.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="posts")
@@ -16,6 +17,8 @@ public class Post {
     @Column(nullable = false)
     private String description;
 
+    public Post() {}
+
     public Post(String title, String description) {
         this.title = title;
         this.description = description;
@@ -27,7 +30,8 @@ public class Post {
         this.description = description;
     }
 
-    public Post() {}
+
+
 
     public String getDescription() {
         return description;

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class AdsController {
+
     @GetMapping("/ads/{id}")
     @ResponseBody
     public String showAd(@PathVariable long id){
