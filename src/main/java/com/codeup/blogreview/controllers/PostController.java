@@ -32,8 +32,8 @@ public class PostController {
 
     @GetMapping("/posts")
     public String postIndex(Model model){
-//       Post firstAd = postsDao.findFirstByTitle("Covid");
-//        System.out.println("firstAd.getId() = " + firstAd.getId());
+       Post firstAd = postsDao.findFirstByTitle("Test");
+        System.out.println("firstAd.getId() = " + firstAd.getId());
 
         List<Post> postList = postsDao.findAll();
         model.addAttribute("posts", postList);
