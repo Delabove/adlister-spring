@@ -44,20 +44,22 @@ public class PostController {
     }
 
 
+
     @GetMapping("/posts/create")
 
     public String viewForm(Model viewModel){
-        return "View form";
+        viewModel.addAttribute("post", new Post());
+        return "/posts/index";
     }
 
     @PostMapping("/posts/create")
-
-    public String createPost(){
+    public String createPost(@ModelAttribute Post savedPost){
 
         User newUser = usersDao.getOne(1L);
-        Post newPost = new Post("Health", "Wear your mask!", newUser);
-        postsDao.save(newPost);
-        return "Create a New Post!";
+        System.out.println(newUser.getId());
+        savedPost.setOwner(newUser);
+        Post savedTestPost = postsDao.save(savedPost);
+        return "/posts/index";
     }
 
     @PostMapping("/posts/{id}/edit")
@@ -69,7 +71,7 @@ public class PostController {
         foundPost.setTitle("Xbox series X");
         //save the changes
         postsDao.save(foundPost); //update posts set title = ? where id =?
-        return "posted edited";
+        return "posted/edited";
     }
 
 

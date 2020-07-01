@@ -79,7 +79,7 @@ public class Post {
         return owner;
     }
 
-    public void setOwner(User user) {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
 

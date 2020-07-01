@@ -12,7 +12,7 @@
     <div th:each="post : ${post}">
         <h3 th:text="${post.title}">Title</h3>
         <div th:text="${post.description}">Description</div>
-        <div th:text="${post.owner.email}">Description</div>
+        <div th:text="${post.owner.email}">Email</div>
 
     </div>
 </div>
