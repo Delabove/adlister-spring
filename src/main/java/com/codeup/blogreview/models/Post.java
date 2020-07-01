@@ -37,17 +37,21 @@ public class Post {
 
     public Post() {}
 
-    public Post(String title, String description, User owner) {
+    public Post(String title, String description, User owner, List<PostImage> images, List<PostCategory> categories) {
         this.title = title;
         this.description = description;
         this.owner = owner;
+        this.images = images;
+        this.categories = categories;
     }
 
-    public Post(long id, String title, String description, User owner) {
+    public Post(long id, String title, String description, User owner, List<PostImage> images ,List<PostCategory> categories) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.owner = owner;
+        this.images = images;
+        this.categories = categories;
     }
 
 

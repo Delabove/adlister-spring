@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head >
+<head th:replace="fragments/heads :: head('Home')">
     <meta charset="UTF-8">
     <title>Post Index</title>
 </head>
     <body>
-<!--        <nav th:replace="fragments/navbar :: navbar"></nav>-->
+        <nav th:replace="fragments/navbar :: navbar"></nav>
         <div class="container">
 
             <div th:each="post : ${posts}">
                 <h3 th:text="${post.title}">Title</h3>
                 <div th:text="${post.description}">Description</div>
-                <div></div>
                 <div th:text="${post.owner.email}">Email</div>
             </div>
         </div>

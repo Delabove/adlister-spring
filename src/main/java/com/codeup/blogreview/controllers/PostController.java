@@ -27,11 +27,12 @@ public class PostController {
 
     @GetMapping("/posts")
     public String postIndex(Model model){
+//       Post firstAd = postsDao.findFirstByTitle("Covid");
+//        System.out.println("firstAd.getId() = " + firstAd.getId());
 
         List<Post> postList = postsDao.findAll();
-
         model.addAttribute("posts", postList);
-        return "posts/index";
+        return "/posts/index";
     }
 
 
@@ -40,16 +41,15 @@ public class PostController {
         Post post = postsDao.getOne(id);
         model.addAttribute("postId", id);
         model.addAttribute("post", post);
-        return "posts/show";
+        return "/posts/show";
     }
-
 
 
     @GetMapping("/posts/create")
 
     public String viewForm(Model viewModel){
         viewModel.addAttribute("post", new Post());
-        return "/posts/index";
+        return "/posts/create";
     }
 
     @PostMapping("/posts/create")
@@ -62,25 +62,25 @@ public class PostController {
         return "/posts/index";
     }
 
-    @PostMapping("/posts/{id}/edit")
+//    @PostMapping("/posts/{id}/edit")
 
-    public String update(@PathVariable long id){
-        //find a post
-        Post foundPost = postsDao.getOne(id); //select * from ads where id =?
-        //edit the post
-        foundPost.setTitle("Xbox series X");
-        //save the changes
-        postsDao.save(foundPost); //update posts set title = ? where id =?
-        return "posted/edited";
-    }
-
-
-    @PostMapping("/posts/{id}/delete")
-
-    public String destroy(@PathVariable long id){
-        postsDao.deleteById(id);
-        return "post deleted";
-    }
+//    public String update(@PathVariable long id){
+//        //find a post
+//        Post foundPost = postsDao.getOne(id); //select * from ads where id =?
+//        //edit the post
+//        foundPost.setTitle("Xbox series X");
+//        //save the changes
+//        postsDao.save(foundPost); //update posts set title = ? where id =?
+//        return "posted/edited";
+//    }
+//
+//
+//    @PostMapping("/posts/{id}/delete")
+//
+//    public String destroy(@PathVariable long id){
+//        postsDao.deleteById(id);
+//        return "post deleted";
+//    }
 
 
 
