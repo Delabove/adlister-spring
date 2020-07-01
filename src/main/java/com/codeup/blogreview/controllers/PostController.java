@@ -59,28 +59,35 @@ public class PostController {
         System.out.println(newUser.getId());
         savedPost.setOwner(newUser);
         Post savedTestPost = postsDao.save(savedPost);
-        return "/posts/index";
+        return "redirect:/posts";
     }
 
-//    @PostMapping("/posts/{id}/edit")
+    @GetMapping("/posts/{id}/edit")
+    public String showEditForm(Model model, @PathVariable long id){
+        Post postToEdit = postsDao.getOne(id);
+        model.addAttribute("post", postToEdit);
+        return "posts/edit";
+    }
 
-//    public String update(@PathVariable long id){
-//        //find a post
-//        Post foundPost = postsDao.getOne(id); //select * from ads where id =?
-//        //edit the post
-//        foundPost.setTitle("Xbox series X");
-//        //save the changes
-//        postsDao.save(foundPost); //update posts set title = ? where id =?
-//        return "posted/edited";
-//    }
-//
-//
-//    @PostMapping("/posts/{id}/delete")
-//
-//    public String destroy(@PathVariable long id){
-//        postsDao.deleteById(id);
-//        return "post deleted";
-//    }
+    @PostMapping("/posts/{id}/edit")
+
+    public String update(@PathVariable long id){
+        //find a post
+        Post foundPost = postsDao.getOne(id);
+        //edit the post
+        foundPost.setTitle("Health");
+        //save the changes
+        postsDao.save(foundPost);
+        return "redirect:/posts";
+    }
+
+
+    @PostMapping("/posts/{id}/delete")
+
+    public String destroy(@PathVariable long id){
+        postsDao.deleteById(id);
+        return "post deleted";
+    }
 
 
 
