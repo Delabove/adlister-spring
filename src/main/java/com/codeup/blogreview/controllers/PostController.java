@@ -59,7 +59,7 @@ public class PostController {
         System.out.println(newUser.getId());
         savedPost.setOwner(newUser);
         Post savedTestPost = postsDao.save(savedPost);
-        return "redirect:/posts";
+        return "redirect:/posts" + savedPost.getId();
     }
 
     @GetMapping("/posts/{id}/edit")
@@ -71,14 +71,11 @@ public class PostController {
 
     @PostMapping("/posts/{id}/edit")
 
-    public String update(@PathVariable long id){
-        //find a post
-        Post foundPost = postsDao.getOne(id);
-        //edit the post
-        foundPost.setTitle("Health");
-        //save the changes
-        postsDao.save(foundPost);
-        return "redirect:/posts";
+    public String editPost(@ModelAttribute Post postToEdit){
+       User currentUser = usersDao.getOne(1L);
+       postToEdit.setOwner(currentUser);
+       postsDao.save(postToEdit);
+        return "redirect:/posts/" + postToEdit.getId();
     }
 
 
@@ -86,7 +83,8 @@ public class PostController {
 
     public String destroy(@PathVariable long id){
         postsDao.deleteById(id);
-        return "post deleted";
+        return "redirect:/posts/";
+
     }
 
 
