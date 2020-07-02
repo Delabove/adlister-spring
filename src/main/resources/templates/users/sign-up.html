@@ -2,11 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/heads :: head('Home')">
     <meta charset="UTF-8">
-    <title>Log In</title>
+    <title>Sign Up</title>
 </head>
 <body>
-<nav th:replace="fragments/navbar :: navbar"></nav>
-
+    <nav th:replace="fragments/navbar :: navbar"></nav>
     <h1>Create an account</h1>
     <form th:action="@{/sign-up}" method="POST" th:object="${user}">
         <label for="username">Username</label>
@@ -20,6 +19,5 @@
 
         <input value="Sign me up!" type="submit" />
     </form>
-
 </body>
 </html>

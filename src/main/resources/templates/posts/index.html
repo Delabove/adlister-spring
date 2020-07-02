@@ -3,15 +3,26 @@
 <head th:replace="fragments/heads :: head('Home')">
     <meta charset="UTF-8">
     <title>Post Index</title>
+
 </head>
     <body>
         <nav th:replace="fragments/navbar :: navbar"></nav>
         <div class="container">
+            <div class="post-template">
+                <div th:each="post : ${posts}">
+                    <h3 th:text="${post.title}">Title</h3>
+                    <div th:text="${post.description}">Description</div>
+                    <div th:text="${post.owner.email}">Email</div>
+                    <div><a th:href="@{'/posts/' + ${post.id}}">Read more..</a></div>
 
-            <div th:each="post : ${posts}">
-                <h3 th:text="${post.title}">Title</h3>
-                <div th:text="${post.description}">Description</div>
-                <div th:text="${post.owner.email}">Email</div>
+                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}">Edit</a>
+                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}">Delete</a>
+
+
+
+
+
+                </div>
             </div>
         </div>
 
