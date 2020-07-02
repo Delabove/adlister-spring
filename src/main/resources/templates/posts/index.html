@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <title>Post Index</title>
 
+
 </head>
     <body>
 
     <nav th:replace="fragments/navbar :: navbar"></nav>
 
-
     <div class="container">
             <div th:each="post : ${posts}">
-            <div class="card mt-5" style="width: 18rem;">
-                <img th:src="@{/img/BlogPlaceholder.png}" class="card-img-top" alt="..."/>
-                <div class="card-body">
-
-                        <h3 th:text="${post.title}">Title</h3>
-                        <div th:text="${post.description}">Description</div>
-                        <div th:text="${post.owner.email}">Email</div>
-                        <div><a th:href="@{'/posts/' + ${post.id}}">Read more..</a></div>
-
-                        <a th:href="@{'/posts/' + ${post.id} + '/edit'}">Edit</a>
-                        <a th:href="@{'/posts/' + ${post.id} + '/edit'}">Delete</a>
-
+                <div class="row">
+                    <div class="card mt-5" style="width: 18rem;">
+                        <img th:src="@{/img/BlogPlaceholder.png}" class="card-img-top" alt="..."/>
+                        <div class="card-body">
+                                <h3 th:text="${post.title}">Title</h3>
+                                <div th:text="${post.description}">Description</div>
+                                <div th:text="${post.owner.email}">Email</div>
+                                <div class="read mt-3" style="font-size: 18px"><a th:href="@{'/posts/' + ${post.id}}" style="color: white"><em>Read more..</em></a></div>
+                                <div class="edit mt-2">
+                                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="background-color: #5f5e5e; color: white; border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 20px 0px 0px 0px;">Edit</a>
+                                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="background-color: #5f5e5e; color: white;  border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 20px 0px 0px 0px;">Delete</a>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>

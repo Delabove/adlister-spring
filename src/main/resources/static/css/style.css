@@ -1,4 +1,21 @@
-.post-template {
-    border: black 2px solid;
-    border-radius: 5px;
+.parent {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 3fr 4fr 2fr;
+    grid-column-gap: 11px;
+    grid-row-gap: 14px;
+}
+
+
+.card-body {
+   background-color: #ba8395;
+    color: white;
+}
+
+.read{
+   color: white;
+}
+
+.edit{
+    color: white;
 }
