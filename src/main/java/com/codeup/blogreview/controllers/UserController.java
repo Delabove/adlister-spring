@@ -1,5 +1,6 @@
 package com.codeup.blogreview.controllers;
 
+import com.codeup.blogreview.DAO.UserRepository;
 import com.codeup.blogreview.models.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -10,13 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
-    private User user;
+    private UserRepository userdao;
     private PasswordEncoder passwordEncoder;
 
-    public UserController(User user, PasswordEncoder passwordEncoder)  {
+    public UserController(UserRepository userdao, PasswordEncoder passwordEncoder)  {
 
-        this.user = user;
-        this.passwordEncoder = passswordEncoder;
+        this.userdao = userdao;
+        this.passwordEncoder =  passwordEncoder;
 
     }
 
@@ -31,7 +32,7 @@ public class UserController {
     public String saveUser(@ModelAttribute User user){
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
-        user.save(user);
+        userdao.save(user);
         return "redirect:/login";
     }
 
