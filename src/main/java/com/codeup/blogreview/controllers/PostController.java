@@ -35,7 +35,7 @@ public class PostController {
 
         List<Post> postList = postsDao.findAll();
         model.addAttribute("posts", postList);
-        return "/posts/index";
+        return "posts/index";
     }
 
 
@@ -44,7 +44,7 @@ public class PostController {
         Post post = postsDao.getOne(id);
         model.addAttribute("postId", id);
         model.addAttribute("post", post);
-        return "/posts/show";
+        return "posts/show";
     }
 
 
@@ -52,7 +52,7 @@ public class PostController {
 
     public String viewForm(Model viewModel){
         viewModel.addAttribute("post", new Post());
-        return "/posts/create";
+        return "posts/create";
     }
 
     @PostMapping("/posts/create")
