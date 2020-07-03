@@ -1,11 +1,28 @@
-.parent {
+/*body#login {*/
+
+/*    background-image: url("/img/BlogLogin.png");*/
+/*    height: 100%;*/
+/*    !*background-position: center;*!*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+
+/*}*/
+
+.container {
     display: grid;
-    grid-template-columns: 3fr 2fr 3fr;
-    grid-template-rows: 3fr 4fr 2fr;
-    grid-column-gap: 11px;
-    grid-row-gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 18px;
+    grid-row-gap: 18px;
 }
 
+/*.login-container {*/
+
+/*    background: rgba(186, 131, 149, 0.36);*/
+/*    width: 75%;*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*}*/
 
 .card-body {
    background-color: #ba8395;
@@ -19,3 +36,4 @@
 .edit{
     color: white;
 }
+

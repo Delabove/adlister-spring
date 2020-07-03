@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Log In</title>
 </head>
-<body>
+<body id="login">
 <nav th:replace="fragments/navbar :: navbar"></nav>
-
+<div class="login-container">
     <h1>Log In</h1>
     <div th:if="${param.error}">
         Invalid Username and Password.
@@ -16,12 +16,32 @@
     </div>
 
     <form th:action="@{/login}" method="POST">
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text"/>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password"/>
+        <div class="form-group row" style="width: 50%">
+        <label for="username" class="col-sm-6 col-form-label">Username</label>
+        <input class="col-sm-6"  id="username" name="username" type="text"/>
+        </div>
+        <div class="form-group row"style="width: 50%">
+        <label class="col-sm-6 col-form-label" for="password">Password</label>
+        <input class="col-sm-6" id="password" name="password" type="password"/>
+        </div>
         <input type="submit" value="Log In"/>
     </form>
+</div>
+
+<!--<form>-->
+<!--    <div class="form-group row">-->
+<!--        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>-->
+<!--        <div class="col-sm-10">-->
+<!--            <input type="text"  class="col-sm-10" id="staticEmail" value="email@example.com">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group row">-->
+<!--        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
+<!--        <div class="col-sm-10">-->
+<!--            <input type="password" class="form-control" id="inputPassword">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</form>-->
 
 
 </body>
