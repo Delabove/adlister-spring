@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/heads :: head('Home')">
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+
+</head>
+<body class="landing">
+
+<nav th:replace="fragments/navbar :: navbar"></nav>
+
+
+
+<div class="bio-container">
+    <h1 class="text-center mt-5" style="font-family: 'Dancing Script', cursive; font-size: 50px">Welcome!</h1>
+    <div class="row bio">
+        <div class="col-5 text-right mt-5">
+            <img id="bio" src="/img/WhoWeAre.jpeg" width="60%"/>
+        </div>
+
+        <div class="col-7 text-center mt-5">
+          <h3 style='font-family:  Raleway, sans-serif'> <strong><em>Who are we..</em></strong></h3>
+            <p class="mt-5 ml-5 mr-5 text-center" style='font-family:  Raleway, sans-serif; font-size: 18px' >I am Jacques. I love routine, gourmet food, Green Bay, and our 7 year old chorkie, Tuck.
+            And I'm DeLayne. I love free spirits, water, adventure, and our 2 year old yorkie, Mia, is my best friend!
+            <em>We</em> are polar opposites but share the same love for each other + travel.</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
