@@ -4,6 +4,11 @@ body.landing  {
     margin: 0;
     padding: 0;
 }
+body.login  {
+    background-image: url("/img/Login.jpg");
+    margin: 0;
+    padding: 0;
+}
 
 .bio {
     margin-top: 100px;
@@ -11,6 +16,13 @@ body.landing  {
 }
 #bio {
     border-radius: 500px;
+}
+
+/*LOGIN */
+.login-form {
+    text-align: center;
+    margin-left: 50px;
+
 }
 
 
