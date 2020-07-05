@@ -7,18 +7,20 @@
 
 </head>
 <body class="landing">
+
 <nav th:replace="fragments/navbar :: navbar"></nav>
 
-<div class="bio-container container-fluid">
-    <h1 class="text-center mt-5" style="color: white; font-family: 'Dancing Script', cursive; font-size: 50px">Welcome!</h1>
-    <div class="row bio">
-        <div class=" text-center mt-5">
-            <img id="bio" src="/img/WhoWeAre.jpeg" width="60%"/>
-        </div>
 
-        <div class=" text-center m-5" style="background-color: rgba(246,246,246,0.39);">
-          <h3 style=' color: #4f5c5c;  font-family:  Raleway, sans-serif'> <strong><em>Who are we...</em></strong></h3>
-            <p class="mt-5 ml-5 mr-5 text-center" style='color: #4f5c5c; font-weight: bold; font-family:  Raleway, sans-serif; font-size: 18px' >I'm Jacques. I love routine, gourmet food, Green Bay, and our 7 year old chorkie, Tuck.
+
+<div class="bio-container container-fluid">
+    <h1 class="welcome text-center" style="color: white; font-family: 'Dancing Script', cursive; font-size: 50px">Welcome</h1>
+    <div class="row bio">
+        <div class="col-12 col-md-5 text-center mt-5">
+            <img id="bio" src="/img/WhoWeAre.jpeg" width="70%"/>
+        </div>
+        <div id="who" class="col-12 col-md-6 text-center mt-4 mb-5" style="background-color: rgba(211,211,211,0.41)">
+          <h3 style='color: #4f5c5c; font-family:  Raleway, sans-serif'> <strong><em>Who are we...</em></strong></h3>
+            <p class="m-5 text-center" style='color: #4f5c5c; font-family:  Raleway, sans-serif; font-size: 18px' >I'm Jacques. I love routine, gourmet food, Green Bay, and our 7 year old chorkie, Tuck.
             I'm DeLayne. I love free spirits, water, and outdoor adventure. Mia, our 2 year old yorkie, is my <em> best </em> friend!
                 <br>
             <em>We</em> are polar opposites but share the same love for each other + travel. This blog is our personal
