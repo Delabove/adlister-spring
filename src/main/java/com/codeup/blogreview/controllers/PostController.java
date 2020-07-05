@@ -29,6 +29,11 @@ public class PostController {
         this.emailService = emailService;
 
     }
+    @GetMapping("posts/about")
+
+    public String viewAbout(){
+        return "posts/about";
+    }
 
     @GetMapping("/posts")
     public String postIndex(Model model){

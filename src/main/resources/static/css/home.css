@@ -1,0 +1,60 @@
+body {
+    background-image: url("/img/LandingPage.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.subscribe {
+    margin-top: 16px;
+}
+
+
+
+
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .subscribe {
+        margin-top: 59px;
+    }
+
+
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .subscribe {
+        margin-top: 99px;
+    }
+
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .subscribe {
+        margin-top: 189px;
+    }
+    #subscribe-btn {
+        text-align: center;
+        font-size: 20px;
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+
+    }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .subscribe {
+        margin-top: 329px;
+    }
+    #subscribe-btn {
+        text-align: center;
+        font-size: 28px;
+        width: 150px;
+        height: 60px;
+        border-radius: 4px;
+
+    }
+}

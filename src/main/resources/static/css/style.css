@@ -5,7 +5,7 @@ body{
 
 
 /*LANDING */
-body.landing, .index  {
+body.index  {
     background-image: url("/img/Landing.png");
     margin: 0;
     padding: 0;
