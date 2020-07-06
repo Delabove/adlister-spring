@@ -12,7 +12,7 @@ body.landing {
 
     .first-group {
         margin-top: 50px;
-        margin-left: 29px;
+        margin-left: 22px;
     }
 
 }
@@ -34,6 +34,11 @@ body.landing {
 .home-card-container{
     margin-top: 44px;!important;
 }
+    .first-group {
+        margin-top: 50px;
+        margin-left: 0px;!important;
+
+    }
 
 }
 
@@ -42,6 +47,12 @@ body.landing {
     .home-card-container{
         margin-top: 94px;!important;
     }
+    .first-group {
+        margin-top: 50px;
+        margin-left: 0px;!important;
+
+    }
+
 
 }
 
@@ -53,6 +64,7 @@ body.landing {
 
     .first-group {
         margin-top: 78px;
+        margin-left: 0px;!important;
     }
 }
 
@@ -64,6 +76,7 @@ body.landing {
     }
     .first-group {
         margin-top: 210px;
+        margin-left: 0px;!important;
     }
 }
 
@@ -71,6 +84,7 @@ body.landing {
 @media (min-width: 1500px) {
     .home-card-container{
         margin-top: 416px;!important;
+        margin-left: 0px;!important;
     }
     .first-group {
         margin-top: 242px;
