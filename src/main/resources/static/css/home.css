@@ -90,3 +90,13 @@ body.landing {
         margin-top: 242px;
     }
 }
+
+@media (min-width: 1900px) {
+    .home-card-container{
+        margin-top: 506px;!important;
+        margin-left: 0px;!important;
+    }
+    .first-group {
+        margin-top: 250px;
+    }
+}
