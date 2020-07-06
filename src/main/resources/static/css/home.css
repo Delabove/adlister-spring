@@ -12,17 +12,25 @@ body.landing {
 
     .first-group {
         margin-top: 50px;
-        /*margin-left: 84px;*/
+        margin-left: 46px;
     }
 
 }
 
+@media (min-width: 375px) {
+
+    .first-group {
+        margin-top: 50px;
+        margin-left: 26px;
+    }
+
+}
 
 @media (min-width: 425px) {
 
     .first-group {
         margin-top: 50px;
-        /*margin-left: 84px;*/
+        margin-left: 56px;
     }
 
 }
