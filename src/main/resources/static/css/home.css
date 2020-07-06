@@ -1,4 +1,4 @@
-body {
+body.landing {
     margin: 0px;
     padding: 0px;
     background-image: url("/img/LandingPage.png");
@@ -55,7 +55,23 @@ body {
     }
 }
 
-/*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
 
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1250px) {
+    .home-card-container{
+        margin-top: 230px;!important;
+    }
+    .first-group {
+        margin-top: 210px;
+    }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1500px) {
+    .home-card-container{
+        margin-top: 416px;!important;
+    }
+    .first-group {
+        margin-top: 242px;
+    }
 }
