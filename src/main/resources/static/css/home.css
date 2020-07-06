@@ -11,6 +11,7 @@ body.landing {
 @media (min-width: 320px) {
 
     .first-group {
+        margin-top: 50px;
         margin-left: 29px;
     }
 
