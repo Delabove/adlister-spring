@@ -11,6 +11,8 @@
     <nav th:replace="fragments/navbar :: navbar"></nav>
 
     <div class="container">
+
+        <h1>Latest posts</h1>
             <div th:each="post : ${posts}">
                 <div class="row">
                     <div class="card mt-5" style="width: 18rem;">

@@ -2,6 +2,7 @@ package com.codeup.blogreview;
 
 import com.codeup.blogreview.DAO.PostRepository;
 import com.codeup.blogreview.DAO.UserRepository;
+import com.codeup.blogreview.models.Post;
 import com.codeup.blogreview.models.User;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,11 +18,12 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import javax.servlet.http.HttpSession;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = BlogReviewApplication.class)
@@ -80,7 +82,7 @@ public class PostsIntegrationTests {
     }
 
     @Test
-    public void testCreateAd() throws Exception {
+    public void testCreatePose() throws Exception {
         // Makes a Post request to /posts/create and expect a redirection to the Ad
         this.mvc.perform(
                 post("/posts/create").with(csrf())
@@ -90,5 +92,55 @@ public class PostsIntegrationTests {
                         .param("description", "for sale"))
                 .andExpect(status().is3xxRedirection());
     }
+
+    @Test
+    public void testShowPost() throws Exception {
+
+        Post existingAd = postsDao.findAll().get(0);
+
+        // Makes a Get request to /ads/{id} and expect a redirection to the Ad show page
+        this.mvc.perform(get("/posts/" + existingAd.getId()))
+                .andExpect(status().isOk())
+                // Test the dynamic content of the page
+                .andExpect(content().string(containsString(existingAd.getDescription())));
+    }
+
+    @Test
+    public void testPostIndex() throws Exception {
+        Post existingAd = postsDao.findAll().get(0);
+
+        // Makes a Get request to /ads and verifies that we get some of the static text of the ads/index.html template and at least the title from the first Ad is present in the template.
+        this.mvc.perform(get("/posts"))
+                .andExpect(status().isOk())
+                // Test the static content of the page
+                .andExpect(content().string(containsString("Latest posts")))
+                // Test the dynamic content of the page
+                .andExpect(content().string(containsString(existingAd.getTitle())));
+    }
+
+
+    @Test
+    public void testEditPost() throws Exception {
+        // Gets the first Ad for tests purposes
+        Post existingAd = postsDao.findAll().get(0);
+
+        // Makes a Post request to /ads/{id}/edit and expect a redirection to the Ad show page
+        this.mvc.perform(
+                post("/posts/" + existingAd.getId() + "/edit").with(csrf())
+                        .session((MockHttpSession) httpSession)
+                        .param("title", "edited title")
+                        .param("description", "edited description"))
+                .andExpect(status().is3xxRedirection());
+
+        // Makes a GET request to /ads/{id} and expect a redirection to the Ad show page
+        this.mvc.perform(get("/posts/" + existingAd.getId()))
+                .andExpect(status().isOk())
+                // Test the dynamic content of the page
+                .andExpect(content().string(containsString("edited title")))
+                .andExpect(content().string(containsString("edited description")));
+    }
+
+
+
 
 }
