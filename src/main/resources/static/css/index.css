@@ -1,5 +1,6 @@
 body.index {
     background-image: url("/img/index-background.png");
+    background-repeat: repeat-y;
 
 }
 
@@ -25,10 +26,10 @@ body.index {
     margin-right: 10px;
     margin-bottom: 10px;
     display: grid;
-    grid-template-columns: 4fr 2fr 5fr 2fr;
+    grid-template-columns: 4fr 5fr 4fr;
     grid-template-rows: 4fr;
     grid-column-gap: 49px;
-    grid-row-gap: 9px;
+    grid-row-gap: 12px;
 
 }
 
