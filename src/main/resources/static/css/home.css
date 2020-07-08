@@ -101,10 +101,21 @@ body.landing {
 
 @media (min-width: 1900px) {
     .home-card-container{
-        margin-top: 506px;!important;
+        margin-top: 606px;!important;
         margin-left: 0px;!important;
     }
     .first-group {
-        margin-top: 250px;
+        margin-top: 470px;
+    }
+}
+
+
+@media (min-width: 2560px) {
+    .home-card-container{
+        margin-top: 716px;!important;
+        margin-left: 0px;!important;
+    }
+    .first-group {
+        margin-top: 470px;
     }
 }

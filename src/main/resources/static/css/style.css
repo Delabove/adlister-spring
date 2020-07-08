@@ -3,20 +3,18 @@ body{
     padding: 0;!important;
 }
 
-
-/*LANDING */
 body.about  {
     background-image: url("/img/Landing.png");
     margin: 0;
     padding: 0;
 }
 
-
 body.login  {
     background-image: url("/img/Login.jpg");
     margin: 0;
     padding: 0;
 }
+
 .welcome {
     margin-top: 80px;
 }
@@ -38,20 +36,5 @@ body.login  {
     text-align: center;
     margin-left: 50px;
 
-}
-
-
-/*ALL POSTS*/
-.index-card-body {
-   background-color: #df855f;
-    color: white;
-}
-
-.read{
-   color: white;
-}
-
-.edit{
-    color: white;
 }
 

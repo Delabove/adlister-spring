@@ -2,34 +2,49 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/heads :: head('Home')">
     <meta charset="UTF-8">
-    <title>Post Index</title>
+    <title>Home</title>
 
 
 </head>
-    <body class="index">
+<body class="index">
 
-    <nav th:replace="fragments/navbar :: navbar"></nav>
+<nav th:replace="fragments/navbar :: navbar"></nav>
 
     <div class="container">
+<!--        <div><img th:src="@{/img/LandingPage.png}" width="100%"/></div>-->
 
         <h1>Latest posts</h1>
+         <div class="card-row">
             <div th:each="post : ${posts}">
-                <div class="row">
-                    <div class="card mt-5" style="width: 18rem;">
-                        <img th:src="@{/img/BlogPlaceholder.png}" class="card-img-top" alt="..."/>
-                        <div class="card-body index-card-body">
+                <div class="row" style="background-color: green">
+                    <div class="card card-row mt-5 text-center">
+                        <img th:src="@{/img/BlogPlaceholder.png}" class="card-img-top p-3" alt="..."/>
+                        <div class="card-body index-card-body p-5">
                                 <h3 th:text="${post.title}">Title</h3>
                                 <div th:text="${post.description}">Description</div>
                                 <div th:text="${post.owner.email}">Email</div>
                                 <div class="read mt-3" style="font-size: 18px"><a th:href="@{'/posts/' + ${post.id}}" style="color: white"><em>Read more..</em></a></div>
-                                <div class="edit mt-2">
-                                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="background-color: #5f5e5e; color: white; border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 20px 0px 0px 0px;">Edit</a>
-                                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="background-color: #5f5e5e; color: white;  border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 20px 0px 0px 0px;">Delete</a>
+                                <div class="edit mt-2 text-center">
+                                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="font-size: 10px;  background-color: #df855f; color: white; border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 15px 0px 0px 0px;">Edit</a>
+                                    <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="font-size: 10px;  background-color: #df855f; color: white;  border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 15px 0px 0px 0px;">Delete</a>
                                 </div>
                         </div>
                     </div>
                 </div>
             </div>
+         </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </body>
 </html>
