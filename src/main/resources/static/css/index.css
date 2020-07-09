@@ -17,18 +17,10 @@ body.index {
     color: white;
 }
 
-#img {
+.card-img-top {
     box-shadow: black -1px 10px 29px -3px;
 }
 
-
-/** {*/
-/*    box-sizing: border-box;*/
-/*}*/
-/*body {*/
-/*    margin: 0 auto;*/
-/*    background-color: khaki;*/
-/*}*/
 
 .grid-container {
     display: grid;
@@ -42,20 +34,6 @@ body.index {
     grid-gap: 3em;
 
 }
-
-/*.box {*/
-/*    color: aliceblue;*/
-/*    text-align: center;*/
-/*    !*background-color: darkgreen;*!*/
-/*    !*width: 50px;*!*/
-/*    !*height: 50px;*!*/
-/*    border: 1px solid black;*/
-/*}*/
-
-/*!*.image-container {*!*/
-/*!*    border: black 1px solid;*!*/
-
-/*!*}*!*/
 
 
 #masonry1 {
