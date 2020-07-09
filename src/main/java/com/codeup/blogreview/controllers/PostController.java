@@ -37,9 +37,10 @@ public class PostController {
 
     @GetMapping("/posts")
     public String postIndex(Model model){
-
+        List<Post> currentPost = postsDao.findTop9ByOrderByIdDesc();
         List<Post> postList = postsDao.findAll();
         model.addAttribute("posts", postList);
+        model.addAttribute("posts", currentPost);
         return "posts/index";
     }
 

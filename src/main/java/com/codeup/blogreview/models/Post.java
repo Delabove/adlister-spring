@@ -103,6 +103,13 @@ public class Post {
         this.categories = categories;
     }
 
+//    public int getCurrentPosts() {
+//        return currentPosts;
+//    }
+//
+//    public void setCurrentPosts(int currentPosts) {
+//        this.currentPosts = currentPosts;
+//    }
 
 }
 
