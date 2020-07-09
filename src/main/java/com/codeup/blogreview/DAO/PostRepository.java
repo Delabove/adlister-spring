@@ -12,7 +12,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("from Post as a where a.title like %:term% or a.description like %:term%")
     List<Post> searchByTitle(@Param("term") String term);
 
-
     Post findFirstByTitle(String title);
 
     Post findByTitle(String post_to_be_deleted);
