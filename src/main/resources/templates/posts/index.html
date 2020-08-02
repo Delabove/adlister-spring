@@ -11,16 +11,15 @@
 <nav th:replace="fragments/navbar :: navbar"></nav>
 
     <div class="container">
-
+<!--        <div><img th:src="@{/img/LandingPage.png}" width="100%"/></div>-->
 
         <h1>Latest posts</h1>
-
-        <div class="grid-container">
-            <div th:each="post, iterStat : ${posts}" class="box" th:id=" 'masonry' + ${iterStat.count}">
-<!--                <div class="row" style="background-color: #df855f">-->
-                    <div class="card mt-5 text-center">
-                        <img th:src="@{/img/1.png}" class="card-img-top"  th:id="'image' + ${iterStat.count} " width="100%"/>
-                        <div class="card-body p-5">
+         <div class="card-row">
+            <div th:each="post : ${posts}">
+                <div class="row" style="background-color: #df855f">
+                    <div class="card card-row mt-5 text-center">
+                        <img th:src="@{/img/BlogPlaceholder.png}" class="card-img-top p-3" alt="..."/>
+                        <div class="card-body index-card-body p-5">
                                 <h3 th:text="${post.title}">Title</h3>
                                 <div th:text="${post.description}">Description</div>
                                 <div th:text="${post.owner.email}">Email</div>
@@ -30,11 +29,19 @@
                                     <a th:href="@{'/posts/' + ${post.id} + '/edit'}" style="font-size: 10px;  background-color: #df855f; color: white;  border: dimgrey 1px solid; border-radius: 5px; padding: 3px; margin: 15px 0px 0px 0px;">Delete</a>
                                 </div>
                         </div>
-<!--                    </div>-->
+                    </div>
                 </div>
             </div>
+         </div>
         </div>
-    </div>
+
+
+
+
+
+
+
+
 
 
 

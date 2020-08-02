@@ -14,6 +14,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     List<Post>  findTop9ByOrderByIdDesc();
 
 
+
     Post findFirstByTitle(String title);
 
     Post findByTitle(String post_to_be_deleted);
