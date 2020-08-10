@@ -8,28 +8,28 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class RollDiceController {
 
-@GetMapping("/roll-dice/{guess}")
+@GetMapping("/roll-dice")
 
-public String usersGuess(@PathVariable int guess, Model model){
+public String usersGuess(){
+//    @PathVariable int guess, Model model
 
+////    random number
+//int random = (int) (Math.random() * 6 + 1);
 
-//    random number
-int random = (int) (Math.random() * 6 + 1);
-
-    model.addAttribute("guess", guess);
-    model.addAttribute("random", random);
-    model.addAttribute("isCorrectGuess", random == guess);
+//    model.addAttribute("guess", guess);
+//    model.addAttribute("random", random);
+//    model.addAttribute("isCorrectGuess", random == guess);
 
     return "roll-dice";
 
 }
 
-
-    @GetMapping("/roll-dice")
-
-    public String showDice(){
-        return "roll-dice";
-    }
+//
+//    @GetMapping("/roll-dice")
+//
+//    public String showDice(){
+//        return "roll-dice";
+//    }
 
 
 }

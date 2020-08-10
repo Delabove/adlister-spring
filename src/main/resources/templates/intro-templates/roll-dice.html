@@ -7,22 +7,31 @@
     <body>
         <nav th:replace="fragments/navbar :: navbar"></nav>
 
-        <div class="container">
-        <div th:each="number: ${#numbers.sequence(1,6)}">
-            <a th:href="@{'/roll-dice/' + ${number}}" th:text="${number}"></a>
-        </div>
+<!--        <div class="container">-->
+<!--        <div th:each="number: ${#numbers.sequence(1,6)}">-->
+<!--            <a th:href="@{'/roll-dice/' + ${number}}" th:text="${number}"></a>-->
+<!--        </div>-->
 
-            <div th:if="${guess}">
-                <h1>Your guess: <span th:text="${guess}"></span>!</h1>
-                <h1>The rolled number: <span th:text="${random}"></span></h1>
-            </div>
-            <h3 th:if="${isCorrectGuess}">
+<!--            <div th:if="${guess}">-->
+<!--                <h1>Your guess: <span th:text="${guess}"></span>!</h1>-->
+<!--                <h1>The rolled number: <span th:text="${random}"></span></h1>-->
+<!--            </div>-->
+<!--            <h3 th:if="${isCorrectGuess}">-->
 
-                You guessed correctly!
-            </h3>
-            <h3 th:if="${isCorrectGuess != null && !isCorrectGuess}">
-                You didn't guess correctly!
-            </h3>
-        </div>
+<!--                You guessed correctly!-->
+<!--            </h3>-->
+<!--            <h3 th:if="${isCorrectGuess != null && !isCorrectGuess}">-->
+<!--                You didn't guess correctly!-->
+<!--            </h3>-->
+<!--        </div>-->
+
+
+
+
+
+
+
+
+
     </body>
 </html>

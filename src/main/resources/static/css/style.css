@@ -9,11 +9,6 @@ body.about  {
     padding: 0;
 }
 
-body.login  {
-    background-image: url("/img/Login.jpg");
-    margin: 0;
-    padding: 0;
-}
 
 .welcome {
     margin-top: 80px;
@@ -30,11 +25,4 @@ body.login  {
 }
 
 
-
-/*LOGIN */
-.login-form {
-    text-align: center;
-    margin-left: 50px;
-
-}
 

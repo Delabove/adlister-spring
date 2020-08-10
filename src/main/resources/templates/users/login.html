@@ -6,42 +6,50 @@
 </head>
 <body class="login">
 <nav th:replace="fragments/navbar :: navbar"></nav>
-    <div class="login-container">
-        <h1 class="text-center" style="font-family: 'Dancing Script', cursive">Log In</h1>
-        <div th:if="${param.error}">
-            Invalid Username and Password.
-        </div>
-        <div th:if="${param.logout}">
-            You have been logged out.
+
+<!--<div class="wrapper login-wrapper fadeInDown">-->
+<!--    <div id="login-formContent">-->
+
+
+
+<div class="wrapper login-wrapper fadeInDown">
+    <div id="login-formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first p-3">
+<!--            <img src="/img/SocialCode-01.png" width="40%"/>-->
         </div>
 
-        <form class="login-form" th:action="@{/login}" method="POST">
-            <div class="form-group row" style="width: 80%">
-                <label for="username" class="col-sm-6 col-form-label text-right">Username</label>
-                <input class="col-sm-6"  id="username" name="username" type="text"/>
+        <!-- Login Form -->
+        <form th:action="@{/login}" method="post">
+            <div class="card-header text-center" style="color: #576541">
+                <h3 style="font-family: 'Open Sans'; font-weight: normal">Please Log In</h3>
             </div>
-            <div class="form-group row"style="width: 80%">
-                <label class="col-sm-6 col-form-label text-right" for="password">Password</label>
-                <input class="col-sm-6" id="password" name="password" type="password"/>
+            <div class="card-body login-card-body text-center">
+                <label style="font-family: 'Open Sans'; font-weight: normal" for="username">Email</label>
+                <input id="username" name="username" type="email" th:required="required" />
+                <br>
+                <label style="font-family: 'Open Sans'; font-weight: normal" for="password">Password</label>
+                <input class="login-password" id="password" name="password" type="password" minlength="5" th:required="required" />
+                <br>
+                <input class="btn btn-success mt-2" type="submit" value="Log In"/>
             </div>
-            <input type="submit" value="Log In"/>
+
         </form>
-    </div>
 
-<!--<form>-->
-<!--    <div class="form-group row">-->
-<!--        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text"  class="col-sm-10" id="staticEmail" value="email@example.com">-->
+<!--        &lt;!&ndash; Remind Passowrd &ndash;&gt;-->
+<!--        <div id="login-formFooter">-->
+<!--            <form class="existing-login" th:action="@{/sign-up}" th:method="post">-->
+<!--                <span>Want to join us?</span>-->
+<!--                <a href="/sign-up">Sign up here</a>-->
+<!--            </form>-->
 <!--        </div>-->
-<!--    </div>-->
-<!--    <div class="form-group row">-->
-<!--        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="password" class="form-control" id="inputPassword">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</form>-->
+
+    </div>
+</div>
+
+
 
 
 </body>
