@@ -1,358 +1,358 @@
 
 
-/*!* BASIC *!*/
+/*!*!* BASIC *!*!*/
 
-/*html {*/
-/*    background-color: #7ea552;*/
-/*}*/
+/*!*html {*!*/
+/*!*    background-color: #7ea552;*!*/
+/*!*}*!*/
 
-/*body.login {*/
-/*    font-family: "Poppins", sans-serif;*/
-/*    height: 100vh;*/
-/*}*/
+/*!*body.login {*!*/
+/*!*    font-family: "Poppins", sans-serif;*!*/
+/*!*    height: 100vh;*!*/
+/*!*}*!*/
 
 
 
-/*!* STRUCTURE *!*/
+/*!*!* STRUCTURE *!*!*/
 
-/*.login-wrapper {*/
+/*!*.login-wrapper {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    width: 100%;*!*/
+/*!*    min-height: 100%;*!*/
+/*!*    padding: 20px;*!*/
+/*!*}*!*/
+
+/*!*#login-formContent {*!*/
+/*!*    -webkit-border-radius: 10px 10px 10px 10px;*!*/
+/*!*    border-radius: 10px 10px 10px 10px;*!*/
+/*!*    background: #fff;*!*/
+/*!*    padding: 30px;*!*/
+/*!*    width: 90%;*!*/
+/*!*    max-width: 450px;*!*/
+/*!*    position: relative;*!*/
+/*!*    padding: 0px;*!*/
+/*!*    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*!*/
+/*!*    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*!*/
+/*!*    text-align: center;*!*/
+/*!*}*!*/
+
+/*!*#login-formFooter {*!*/
+/*!*    background-color: #f6f6f6;*!*/
+/*!*    border-top: 1px solid #dce8f1;*!*/
+/*!*    padding: 25px;*!*/
+/*!*    text-align: center;*!*/
+/*!*    -webkit-border-radius: 0 0 10px 10px;*!*/
+/*!*    border-radius: 0 0 10px 10px;*!*/
+/*!*}*!*/
+
+
+/*!*!* ANIMATIONS *!*!*/
+
+/*!*!* Simple CSS3 Fade-in-down Animation *!*!*/
+/*!*.fadeInDown {*!*/
+/*!*    -webkit-animation-name: fadeInDown;*!*/
+/*!*    animation-name: fadeInDown;*!*/
+/*!*    -webkit-animation-duration: 1s;*!*/
+/*!*    animation-duration: 1s;*!*/
+/*!*    -webkit-animation-fill-mode: both;*!*/
+/*!*    animation-fill-mode: both;*!*/
+/*!*}*!*/
+
+/*!*@-webkit-keyframes fadeInDown {*!*/
+/*!*    0% {*!*/
+/*!*        opacity: 0;*!*/
+/*!*        -webkit-transform: translate3d(0, -100%, 0);*!*/
+/*!*        transform: translate3d(0, -100%, 0);*!*/
+/*!*    }*!*/
+/*!*    100% {*!*/
+/*!*        opacity: 1;*!*/
+/*!*        -webkit-transform: none;*!*/
+/*!*        transform: none;*!*/
+/*!*    }*!*/
+/*!*}*!*/
+
+/*!*@keyframes fadeInDown {*!*/
+/*!*    0% {*!*/
+/*!*        opacity: 0;*!*/
+/*!*        -webkit-transform: translate3d(0, -100%, 0);*!*/
+/*!*        transform: translate3d(0, -100%, 0);*!*/
+/*!*    }*!*/
+/*!*    100% {*!*/
+/*!*        opacity: 1;*!*/
+/*!*        -webkit-transform: none;*!*/
+/*!*        transform: none;*!*/
+/*!*    }*!*/
+/*!*}*!*/
+
+/*!*!* Simple CSS3 Fade-in Animation *!*!*/
+/*!*@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }*!*/
+/*!*@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }*!*/
+/*!*@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }*!*/
+
+/*!*.fadeIn {*!*/
+/*!*    opacity:0;*!*/
+/*!*    -webkit-animation:fadeIn ease-in 1;*!*/
+/*!*    -moz-animation:fadeIn ease-in 1;*!*/
+/*!*    animation:fadeIn ease-in 1;*!*/
+
+/*!*    -webkit-animation-fill-mode:forwards;*!*/
+/*!*    -moz-animation-fill-mode:forwards;*!*/
+/*!*    animation-fill-mode:forwards;*!*/
+
+/*!*    -webkit-animation-duration:1s;*!*/
+/*!*    -moz-animation-duration:1s;*!*/
+/*!*    animation-duration:1s;*!*/
+/*!*}*!*/
+
+/*!*.fadeIn.first {*!*/
+/*!*    -webkit-animation-delay: 0.4s;*!*/
+/*!*    -moz-animation-delay: 0.4s;*!*/
+/*!*    animation-delay: 0.4s;*!*/
+/*!*}*!*/
+
+/*!*.fadeIn.second {*!*/
+/*!*    -webkit-animation-delay: 0.6s;*!*/
+/*!*    -moz-animation-delay: 0.6s;*!*/
+/*!*    animation-delay: 0.6s;*!*/
+/*!*}*!*/
+
+/*!*.fadeIn.third {*!*/
+/*!*    -webkit-animation-delay: 0.8s;*!*/
+/*!*    -moz-animation-delay: 0.8s;*!*/
+/*!*    animation-delay: 0.8s;*!*/
+/*!*}*!*/
+
+/*!*.fadeIn.fourth {*!*/
+/*!*    -webkit-animation-delay: 1s;*!*/
+/*!*    -moz-animation-delay: 1s;*!*/
+/*!*    animation-delay: 1s;*!*/
+/*!*}*!*/
+
+
+/*.index-container{*/
 /*    display: flex;*/
-/*    align-items: center;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
+/*}*/
+
+/*.comm-post-container{*/
+/*    float: top;*/
+/*}*/
+
+/*.comm-post-card{*/
+/*    margin-left: 50px;*/
+/*    margin-top: 50px;*/
+/*    width: 13rem;*/
+/*    height: 20rem;*/
+/*    overflow: hidden;*/
+/*    padding-bottom: 10px;*/
+/*    box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.39);*/
+/*}*/
+
+/*.eventCalbtn{*/
+/*    margin-left: 213px;*/
+/*    box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.24);*/
+/*}*/
+
+/*.index-btn{*/
+/*    box-shadow: rgba(9, 0, 0, 0.28) 10px 10px 10px;*/
+/*}*/
+
+/*.header-border {*/
+/*    height: 250px*/
+/*}*/
+/*.header-fill{*/
+/*    width: 300px;*/
+/*    height: 180px*/
+/*}*/
+
+/*.social-img {*/
 /*    width: 100%;*/
-/*    min-height: 100%;*/
-/*    padding: 20px;*/
 /*}*/
 
-/*#login-formContent {*/
-/*    -webkit-border-radius: 10px 10px 10px 10px;*/
-/*    border-radius: 10px 10px 10px 10px;*/
-/*    background: #fff;*/
-/*    padding: 30px;*/
-/*    width: 90%;*/
-/*    max-width: 450px;*/
-/*    position: relative;*/
-/*    padding: 0px;*/
-/*    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*/
-/*    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*/
-/*    text-align: center;*/
+/*.read{*/
+/*    color: white;*/
 /*}*/
 
-/*#login-formFooter {*/
-/*    background-color: #f6f6f6;*/
-/*    border-top: 1px solid #dce8f1;*/
-/*    padding: 25px;*/
-/*    text-align: center;*/
-/*    -webkit-border-radius: 0 0 10px 10px;*/
-/*    border-radius: 0 0 10px 10px;*/
+/*.edit{*/
+/*    color: white;*/
+/*}*/
+
+/*.card-img-top {*/
+/*    box-shadow: black -1px 10px 29px -3px;*/
 /*}*/
 
 
-/*!* ANIMATIONS *!*/
-
-/*!* Simple CSS3 Fade-in-down Animation *!*/
-/*.fadeInDown {*/
-/*    -webkit-animation-name: fadeInDown;*/
-/*    animation-name: fadeInDown;*/
-/*    -webkit-animation-duration: 1s;*/
-/*    animation-duration: 1s;*/
-/*    -webkit-animation-fill-mode: both;*/
-/*    animation-fill-mode: both;*/
+/*div#map {*/
+/*    margin: 0 auto;*/
+/*    margin-top: 3em;*/
 /*}*/
 
-/*@-webkit-keyframes fadeInDown {*/
-/*    0% {*/
-/*        opacity: 0;*/
-/*        -webkit-transform: translate3d(0, -100%, 0);*/
-/*        transform: translate3d(0, -100%, 0);*/
+
+/*#select-container #zoom-level {*/
+/*    width: 90px;*/
+/*    margin-left: 30px;*/
+
+/*}*/
+
+/*#select-container {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.marker {*/
+/*    !*background-image: url('img/Cody.png');*!*/
+/*    background-size: cover;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    border-radius: 50%;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*div.fc-content span.fc-time {*/
+/*    color: #4d5e34;*/
+/*    background-color: #e8efdf;*/
+/*}*/
+/*#calendar{*/
+/*    color: #4d5e34;*/
+/*}*/
+
+
+/*!* Small devices (phones and pocket devices, 576 and up) *!*/
+/*@media screen and (min-width:425px) {*/
+
+/*    .header-border {*/
+/*        height: 350px;*/
 /*    }*/
-/*    100% {*/
-/*        opacity: 1;*/
-/*        -webkit-transform: none;*/
-/*        transform: none;*/
+
+/*    .header-fill{*/
+/*        width: 350px;*/
+/*        height: 265px;*/
+/*    }*/
+
+
+
+/*}*/
+
+/*!* Medium devices (tablets, 768px and up) *!*/
+/*@media screen and (min-width:768px) {*/
+/*    .comm-post-card{*/
+/*        margin-left: 0px;*/
+
+/*    }*/
+/*    .allPosts-grid{*/
+/*        columns: 2;*/
+/*        margin-left: 0px;*/
+/*        margin-top: 10px;*/
+
+/*    }*/
+/*    .header-fill {*/
+/*        width: 663px;*/
+/*        height: 235px;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .social-img {*/
+/*        width: 85%;*/
+/*    }*/
+
+/*}*/
+
+/*!* Large devices (desktops, 992px and up) *!*/
+/*@media screen and (min-width:992px) {*/
+/*    #map   {*/
+/*        width: 270px;*/
+/*        height: 270px;*/
+/*    }*/
+
+/*    #calendar{*/
+/*        width: 100%;*/
+/*        margin-left: 0px;*/
+/*    }*/
+
+/*    .header-fill{*/
+/*        width: 922px;*/
+/*        height: 250px;*/
+/*    }*/
+
+/*    .social-img {*/
+/*        width: 80%;*/
 /*    }*/
 /*}*/
 
-/*@keyframes fadeInDown {*/
-/*    0% {*/
-/*        opacity: 0;*/
-/*        -webkit-transform: translate3d(0, -100%, 0);*/
-/*        transform: translate3d(0, -100%, 0);*/
+/*!* Extra large devices (large desktops, 1200px and up) *!*/
+/*@media screen and (min-width:1200px) {*/
+
+/*    #map   {*/
+/*        width: 500px;*/
+/*        height: 500px;*/
 /*    }*/
-/*    100% {*/
-/*        opacity: 1;*/
-/*        -webkit-transform: none;*/
-/*        transform: none;*/
+
+/*    #calendar{*/
+/*        width: 70%;*/
+/*        margin-left: 89px;*/
 /*    }*/
-/*}*/
 
-/*!* Simple CSS3 Fade-in Animation *!*/
-/*@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }*/
-/*@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }*/
-/*@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }*/
+/*    .header-border {*/
+/*        height: 490px*/
+/*    }*/
 
-/*.fadeIn {*/
-/*    opacity:0;*/
-/*    -webkit-animation:fadeIn ease-in 1;*/
-/*    -moz-animation:fadeIn ease-in 1;*/
-/*    animation:fadeIn ease-in 1;*/
+/*    .header-fill{*/
+/*        width: 1632px;*/
+/*        height: 350px;*/
+/*    }*/
 
-/*    -webkit-animation-fill-mode:forwards;*/
-/*    -moz-animation-fill-mode:forwards;*/
-/*    animation-fill-mode:forwards;*/
 
-/*    -webkit-animation-duration:1s;*/
-/*    -moz-animation-duration:1s;*/
-/*    animation-duration:1s;*/
-/*}*/
+/*    .social-img {*/
+/*        width: 60%;*/
+/*    }*/
 
-/*.fadeIn.first {*/
-/*    -webkit-animation-delay: 0.4s;*/
-/*    -moz-animation-delay: 0.4s;*/
-/*    animation-delay: 0.4s;*/
-/*}*/
 
-/*.fadeIn.second {*/
-/*    -webkit-animation-delay: 0.6s;*/
-/*    -moz-animation-delay: 0.6s;*/
-/*    animation-delay: 0.6s;*/
-/*}*/
-
-/*.fadeIn.third {*/
-/*    -webkit-animation-delay: 0.8s;*/
-/*    -moz-animation-delay: 0.8s;*/
-/*    animation-delay: 0.8s;*/
-/*}*/
-
-/*.fadeIn.fourth {*/
-/*    -webkit-animation-delay: 1s;*/
-/*    -moz-animation-delay: 1s;*/
-/*    animation-delay: 1s;*/
 /*}*/
 
 
-.index-container{
-    display: flex;
-}
-
-.comm-post-container{
-    float: top;
-}
-
-.comm-post-card{
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 13rem;
-    height: 20rem;
-    overflow: hidden;
-    padding-bottom: 10px;
-    box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.39);
-}
-
-.eventCalbtn{
-    margin-left: 213px;
-    box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.24);
-}
-
-.index-btn{
-    box-shadow: rgba(9, 0, 0, 0.28) 10px 10px 10px;
-}
-
-.header-border {
-    height: 250px
-}
-.header-fill{
-    width: 300px;
-    height: 180px
-}
-
-.social-img {
-    width: 100%;
-}
-
-.read{
-    color: white;
-}
-
-.edit{
-    color: white;
-}
-
-.card-img-top {
-    box-shadow: black -1px 10px 29px -3px;
-}
 
 
-div#map {
-    margin: 0 auto;
-    margin-top: 3em;
-}
+/*@media screen and (min-width:2200px) {*/
+
+/*    .comm-post-card{*/
+/*        width: 25rem;*/
+/*        height: 20rem;*/
+/*        overflow: hidden;*/
+/*        padding-bottom: 10px;*/
+/*    }*/
 
 
-#select-container #zoom-level {
-    width: 90px;
-    margin-left: 30px;
+/*    #calendar{*/
+/*        width: 70%;*/
+/*        margin-left: 130px;*/
+/*        color: #4d5e34;*/
+/*    }*/
+/*    .eventCalbtn{*/
+/*        margin-left: 413px;*/
+/*        box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.24);*/
+/*    }*/
 
-}
+/*    div.fc-content, span.fc-time {*/
+/*        color: white;*/
+/*        background-color: #7ea552;*/
+/*    }*/
 
-#select-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*    .header-border {*/
+/*        height: 500px*/
+/*    }*/
 
-.marker {
-    /*background-image: url('img/Cody.png');*/
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-}
+/*    .header-fill{*/
+/*        width: 2299px;*/
+/*        height: 360px;*/
+/*    }*/
 
-div.fc-content span.fc-time {
-    color: #4d5e34;
-    background-color: #e8efdf;
-}
-#calendar{
-    color: #4d5e34;
-}
-
-
-/* Small devices (phones and pocket devices, 576 and up) */
-@media screen and (min-width:425px) {
-
-    .header-border {
-        height: 350px;
-    }
-
-    .header-fill{
-        width: 350px;
-        height: 265px;
-    }
+/*    .social-img {*/
+/*        width: 65%;*/
+/*    }*/
 
 
-
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width:768px) {
-    .comm-post-card{
-        margin-left: 0px;
-
-    }
-    .allPosts-grid{
-        columns: 2;
-        margin-left: 0px;
-        margin-top: 10px;
-
-    }
-    .header-fill {
-        width: 663px;
-        height: 235px;
-        text-align: center;
-    }
-
-    .social-img {
-        width: 85%;
-    }
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media screen and (min-width:992px) {
-    #map   {
-        width: 270px;
-        height: 270px;
-    }
-
-    #calendar{
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .header-fill{
-        width: 922px;
-        height: 250px;
-    }
-
-    .social-img {
-        width: 80%;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width:1200px) {
-
-    #map   {
-        width: 500px;
-        height: 500px;
-    }
-
-    #calendar{
-        width: 70%;
-        margin-left: 89px;
-    }
-
-    .header-border {
-        height: 490px
-    }
-
-    .header-fill{
-        width: 1632px;
-        height: 350px;
-    }
-
-
-    .social-img {
-        width: 60%;
-    }
-
-
-}
-
-
-
-
-@media screen and (min-width:2200px) {
-
-    .comm-post-card{
-        width: 25rem;
-        height: 20rem;
-        overflow: hidden;
-        padding-bottom: 10px;
-    }
-
-
-    #calendar{
-        width: 70%;
-        margin-left: 130px;
-        color: #4d5e34;
-    }
-    .eventCalbtn{
-        margin-left: 413px;
-        box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.24);
-    }
-
-    div.fc-content, span.fc-time {
-        color: white;
-        background-color: #7ea552;
-    }
-
-    .header-border {
-        height: 500px
-    }
-
-    .header-fill{
-        width: 2299px;
-        height: 360px;
-    }
-
-    .social-img {
-        width: 65%;
-    }
-
-
-}
+/*}*/
 

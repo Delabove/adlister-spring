@@ -7,50 +7,21 @@
 <body class="login">
 <nav th:replace="fragments/navbar :: navbar"></nav>
 
-<!--<div class="wrapper login-wrapper fadeInDown">-->
-<!--    <div id="login-formContent">-->
-
-
-
-<div class="wrapper login-wrapper fadeInDown">
-    <div id="login-formContent">
-        <!-- Tabs Titles -->
-
-        <!-- Icon -->
-        <div class="fadeIn first p-3">
-<!--            <img src="/img/SocialCode-01.png" width="40%"/>-->
-        </div>
-
-        <!-- Login Form -->
-        <form th:action="@{/login}" method="post">
-            <div class="card-header text-center" style="color: #576541">
-                <h3 style="font-family: 'Open Sans'; font-weight: normal">Please Log In</h3>
-            </div>
-            <div class="card-body login-card-body text-center">
-                <label style="font-family: 'Open Sans'; font-weight: normal" for="username">Email</label>
-                <input id="username" name="username" type="email" th:required="required" />
-                <br>
-                <label style="font-family: 'Open Sans'; font-weight: normal" for="password">Password</label>
-                <input class="login-password" id="password" name="password" type="password" minlength="5" th:required="required" />
-                <br>
-                <input class="btn btn-success mt-2" type="submit" value="Log In"/>
-            </div>
-
-        </form>
-
-<!--        &lt;!&ndash; Remind Passowrd &ndash;&gt;-->
-<!--        <div id="login-formFooter">-->
-<!--            <form class="existing-login" th:action="@{/sign-up}" th:method="post">-->
-<!--                <span>Want to join us?</span>-->
-<!--                <a href="/sign-up">Sign up here</a>-->
-<!--            </form>-->
-<!--        </div>-->
-
-    </div>
+<h1>Log In</h1>
+<!--<div th:if="${param.error}">-->
+<!--    Invalid Username and Password.-->
+<!--</div>-->
+<div th:if="${param.logout}">
+    You have been logged out.
 </div>
 
-
-
+<form th:action="@{/login}" method="post">
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" />
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" />
+    <input type="submit" value="Log In" />
+</form>
 
 </body>
 </html>
